@@ -11,6 +11,20 @@
       card with the title will show instead — so you can publish
       now and swap photos in whenever you have them.
 
+   TO ADD A VIDEO PREVIEW (plays on hover, like Netflix):
+   1. Put a short video file (5-15 sec, .mp4 works best) in the
+      same folder, e.g. "clip1.mp4"
+   2. Add a video field to that card:  video: "clip1.mp4"
+   3. Keep the "image" field too — it's the still photo shown
+      before you hover, and the video plays over it on hover.
+      Example:
+      { title: "Beach Day", image: "beach.jpg", video: "beach-clip.mp4", ... }
+   4. Keep clips SHORT and compressed — big files slow the site
+      down a lot, especially on mobile data. Under ~10MB per
+      clip is a good target.
+   5. Clicking the card still opens the full modal, where the
+      video plays with sound and controls if present.
+
    HERO SECTION:
    - Set heroImage below to a photo filename for the big banner.
    ============================================================ */

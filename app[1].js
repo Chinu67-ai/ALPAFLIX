@@ -38,11 +38,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Visual: real image or gradient placeholder
       if (item.image) {
-        card.innerHTML = `<img src="${item.image}" alt="${item.title}" loading="lazy">`;
+        card.innerHTML = `<img src="${item.image}" alt="${item.title}" loading="lazy" class="card-still">`;
       } else {
         const gradient = PLACEHOLDER_GRADIENTS[gradientIndex % PLACEHOLDER_GRADIENTS.length];
         gradientIndex++;
-        card.innerHTML = `<div class="card-fallback-bg" style="background:${gradient}">${item.title}</div>`;
+        card.innerHTML = `<div class="card-fallback-bg card-still" style="background:${gradient}">${item.title}</div>`;
+      }
+
+      // Video preview on hover (optional, only if item.video is set)
+      if (item.video) {
+        const video = document.createElement('video');
+        video.className = 'card-video';
+        video.src = item.video;
+        video.muted = true;
+        video.loop = true;
+        video.playsInline = true;
+        video.preload = 'none';
+        card.appendChild(video);
+
+        card.addEventListener('mouseenter', () => {
+          video.currentTime = 0;
+          video.play().catch(() => {}); // ignore autoplay rejection
+        });
+        card.addEventListener('mouseleave', () => {
+          video.pause();
+        });
+        card.addEventListener('focus', () => {
+          video.currentTime = 0;
+          video.play().catch(() => {});
+        });
+        card.addEventListener('blur', () => {
+          video.pause();
+        });
       }
 
       // Match badge
@@ -88,22 +115,29 @@ document.addEventListener('DOMContentLoaded', () => {
   function openModal(item) {
     lastFocused = document.activeElement;
 
-    if (item.image) {
-      modalHero.style.background = `center/cover no-repeat url("${item.image}")`;
+    if (item.video) {
+      modalHero.style.background = '#000';
+      modalHero.innerHTML = `
+        <video class="modal-video" src="${item.video}" controls playsinline></video>
+        <div class="modal-hero-fade" style="pointer-events:none;"></div>
+      `;
     } else {
-      const g = PLACEHOLDER_GRADIENTS[Math.floor(Math.random() * PLACEHOLDER_GRADIENTS.length)];
-      modalHero.style.background = g;
+      if (item.image) {
+        modalHero.style.background = `center/cover no-repeat url("${item.image}")`;
+      } else {
+        const g = PLACEHOLDER_GRADIENTS[Math.floor(Math.random() * PLACEHOLDER_GRADIENTS.length)];
+        modalHero.style.background = g;
+      }
+      // Rebuild fade + buttons (since we overwrite background via style each time)
+      modalHero.innerHTML = `
+        <div class="modal-hero-fade"></div>
+        <div class="modal-hero-buttons">
+          <button class="btn btn-play btn-sm">▶ Play</button>
+          <button class="btn btn-circle" aria-label="Add to list">＋</button>
+          <button class="btn btn-circle" aria-label="Like">👍</button>
+        </div>
+      `;
     }
-
-    // Rebuild fade + buttons (since we overwrite background via style each time)
-    modalHero.innerHTML = `
-      <div class="modal-hero-fade"></div>
-      <div class="modal-hero-buttons">
-        <button class="btn btn-play btn-sm">▶ Play</button>
-        <button class="btn btn-circle" aria-label="Add to list">＋</button>
-        <button class="btn btn-circle" aria-label="Like">👍</button>
-      </div>
-    `;
 
     modalDesc.textContent = item.desc || "";
     modalGenre.textContent = item.genre || "Romance";
