@@ -49,7 +49,7 @@ const CARD_DATA = {
     { title: "\"You Know What I Mean\"", desc: "knock knock pizza delivery", genre: "Comedy", image: "IMG-20260613-WA0025.jpg" },
     { title: "never getting bore of you ", desc: "everytime you tell me about your day about anything about anyone it like someone is telling me a story and i fucking love your stories ", genre: "Parody", image: "IMG-20260614-WA0082.jpg" },
     { title: "Texting till 5AM", desc: "First time i talk to someone till 5 and the i feel ab to fas gaya ye dil mera", genre: "Mystery-Comedy", image: "" },
-    { title: "Suti babuuu", desc: "voice note bhej diya kar", genre: "Comedy", image: "" },
+    { title: "Suti babuuu", desc: "voice note bhej diya kar", genre: "Comedy", image: "IMG-20260728-WA0027.jpg" },
     { title: "jute juti", desc: "juti saaallli", genre: "Linguistics", image: "" },
   ],
 
