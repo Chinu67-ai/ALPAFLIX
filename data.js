@@ -41,16 +41,16 @@ const CARD_DATA = {
     { title: "Fights", tag: "S1: Ep 7", desc: "Ladaiya to bohot hoti hai like majorly meri shits ki wajah se par after all these fights i think it just bring us more closee and if i think about the best part of those fights they are over and we are finee and sorry abhi nahi btane ke liye kaha gyaa hu mai ye kar rha hu.", genre: "Drama", progress: 35, image: "IMG-20260115-WA0019.jpeg" },
     { title: "First flowers", tag: "S1: Ep 9", desc: "10th febuary That day when u bring me that pink flower like wtff was that someone gave me flower someone so beautiful as you gave me pink flower that day i thought aisa kya daan kara maine vo fool ki mehak ohoo par ek baat thii terese khubsurat nahi tha vo", genre: "romcom", progress: 78, image: "IMG-20260210-WA0032_1.jpeg" },
     { title: "Movie date ", tag: "S2: Ep 12", desc: "Hail merry the movie date the day we both wore white u were frightened ke koi dekh na lee hahaha darti hai mujhe bhi darati hai last seat pe nahi baithe uska dukh hai par ushee jyda maze to aage kar liyee adhe scenes to dekehe hi nahi hahahaah chasma jo nahi dala tha  ", genre: "Slice of Life", progress: 20,video:"VID-20260507-WA0077.mp4"},
-    { title: "Fairwell", tag: "S2: Ep 20", desc: "hahahaah kya hi din kya baat kare is din thiii brown dress cutie,ramp walk ohoo aura infinity hogaya mera uske baad to ,tera chichoro wala dance hahaha maza hi agaya crazyy gurl acha end hota akele jaate nehar or michell agae ,hash kara try sath me haha gulab jamun ohoo tere sath khae to jyada methee lage", genre: "Romance", progress: 88, video: "" },
+    { title: "Fairwell", tag: "S2: Ep 20", desc: "hahahaah kya hi din kya baat kare is din thiii brown dress cutie,ramp walk ohoo aura infinity hogaya mera uske baad to ,tera chichoro wala dance hahaha maza hi agaya crazyy gurl acha end hota akele jaate nehar or michell agae ,hash kara try sath me haha gulab jamun ohoo tere sath khae to jyada methee lage", genre: "Romance", progress: 88, video: "VID-20260507-WA0042_1781427574093.mp4" },
   ],
 
   jokes: [
-    { title: "The Nickname Nobody Else Understands", desc: "khushdumiyaa hahahaha, genre: "Comedy", image: "" },
-    { title: "\"You Know What I Mean\"", desc: "knock knock pizza delivery", genre: "Comedy", image: "IMG-20260613-WA0025.jpg" },
+    { title: "The Nickname Nobody Else Understands", desc: "khushdumiyaa hahahaha, genre: "Comedy", image: "IMG-20260201-WA0007.jpg" },
+    { title: "\"You Know What I Mean\"", desc: "knock knock pizza delivery", genre: "Comedy", image: "IMG-20260604-WA0004.jpg" },
     { title: "never getting bore of you ", desc: "everytime you tell me about your day about anything about anyone it like someone is telling me a story and i fucking love your stories ", genre: "Parody", image: "IMG-20260614-WA0082.jpg" },
     { title: "Texting till 5AM", desc: "First time i talk to someone till 5 and the i feel ab to fas gaya ye dil mera", genre: "Mystery-Comedy", image: "" },
     { title: "Suti babuuu", desc: "voice note bhej diya kar", genre: "Comedy", image: "IMG-20260728-WA0027.jpg" },
-    { title: "jute juti", desc: "juti saaallli", genre: "Linguistics", image: "" },
+    { title: "jute juti", desc: "juti saaallli", genre: "Linguistics", image: "IMG-20260613-WA0025.jpg" },
   ],
 
   trips: [
